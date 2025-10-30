@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saudi Legal Assistant - AI-Powered Legal Consultation</title>
+    <meta name="description" content="AI-powered legal assistant for Saudi Arabian law. Get instant legal advice, document analysis, and expert consultation." />
+    <script>
+      // Prevent flash of wrong theme - FORCE LIGHT MODE ON LOAD
+      (function() {
+        console.log('Theme init script running...');
+        
+        const savedTheme = localStorage.getItem('theme');
+        console.log('Saved theme:', savedTheme);
+        
+        // Default to light mode
+        const theme = savedTheme || 'light';
+        console.log('Using theme:', theme);
+        
+        // Remove any existing theme classes
+        document.documentElement.classList.remove('dark', 'light');
+        
+        // Apply the theme
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+          console.log('Applied DARK mode');
+        } else {
+          document.documentElement.classList.add('light');
+          console.log('Applied LIGHT mode');
+        }
+        
+        // Log final state
+        console.log('HTML classes:', document.documentElement.className);
+      })();
+    </script>
+  </head>
+  <body class="antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

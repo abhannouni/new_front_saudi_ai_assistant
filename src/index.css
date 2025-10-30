@@ -1,0 +1,254 @@
+@import 'tailwindcss';
+
+/* Force base styles for light mode */
+:root {
+  color-scheme: light;
+}
+
+:root.dark {
+  color-scheme: dark;
+}
+
+html {
+  background-color: white;
+}
+
+html.dark {
+  background-color: rgb(3 7 18);
+}
+
+/* Animations */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Base styles */
+* {
+  border-color: rgb(229 231 235);
+}
+
+.dark * {
+  border-color: rgb(31 41 55);
+}
+
+body {
+  background-color: white;
+  color: rgb(17 24 39);
+}
+
+.dark body {
+  background-color: rgb(3 7 18);
+  color: rgb(243 244 246);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(243 244 246);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background-color: rgb(17 24 39);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(209 213 219);
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background-color: rgb(55 65 81);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(156 163 175);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(75 85 99);
+}
+
+/* Custom color variables */
+:root {
+  --color-primary-50: #f0fdf4;
+  --color-primary-100: #dcfce7;
+  --color-primary-200: #bbf7d0;
+  --color-primary-300: #86efac;
+  --color-primary-400: #4ade80;
+  --color-primary-500: #22c55e;
+  --color-primary-600: #16a34a;
+  --color-primary-700: #15803d;
+  --color-primary-800: #166534;
+  --color-primary-900: #14532d;
+  --color-primary-950: #052e16;
+
+  --color-accent-50: #fffbeb;
+  --color-accent-100: #fef3c7;
+  --color-accent-200: #fde68a;
+  --color-accent-300: #fcd34d;
+  --color-accent-400: #fbbf24;
+  --color-accent-500: #f59e0b;
+  --color-accent-600: #d97706;
+  --color-accent-700: #b45309;
+  --color-accent-800: #92400e;
+  --color-accent-900: #78350f;
+  --color-accent-950: #451a03;
+}
+
+/* Gradients */
+.gradient-saudi {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(135deg, #16a34a, #d97706);
+}
+
+/* Glass effect */
+.glass {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+.dark .glass {
+  background-color: rgba(17, 24, 39, 0.7);
+  border-color: rgba(31, 41, 55, 0.5);
+}
+
+/* Card */
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid rgb(229 231 235);
+  transition: box-shadow 0.2s;
+}
+
+.dark .card {
+  background-color: rgb(17 24 39);
+  border-color: rgb(31 41 55);
+}
+
+.card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  outline: none;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0), 0 0 0 4px var(--color-primary-500);
+}
+
+.btn-primary {
+  background-color: var(--color-primary-600);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-700);
+}
+
+.btn-secondary {
+  background-color: rgb(229 231 235);
+  color: rgb(17 24 39);
+}
+
+.dark .btn-secondary {
+  background-color: rgb(31 41 55);
+  color: rgb(243 244 246);
+}
+
+.btn-secondary:hover {
+  background-color: rgb(209 213 219);
+}
+
+.dark .btn-secondary:hover {
+  background-color: rgb(55 65 81);
+}
+
+/* Input */
+.input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(209 213 219);
+  background-color: white;
+  color: rgb(17 24 39);
+  outline: none;
+  transition: all 0.2s;
+}
+
+.dark .input {
+  border-color: rgb(55 65 81);
+  background-color: rgb(17 24 39);
+  color: rgb(243 244 246);
+}
+
+.input:focus {
+  box-shadow: 0 0 0 2px var(--color-primary-500);
+  border-color: transparent;
+}
+
+/* Link */
+.link {
+  color: var(--color-primary-600);
+  transition: color 0.2s;
+}
+
+.dark .link {
+  color: var(--color-primary-400);
+}
+
+.link:hover {
+  color: var(--color-primary-700);
+  text-decoration: underline;
+}
+
+.dark .link:hover {
+  color: var(--color-primary-300);
+}
