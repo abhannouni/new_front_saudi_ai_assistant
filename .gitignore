@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Development documentation (temporary files)
+*_DOCUMENTATION.md
+*_UPDATE_SUMMARY.md
+*_SYSTEM_UPDATE.md
+*_IMPLEMENTATION_SUMMARY.md
+*_QUICK_REFERENCE.md
+COMPLETION.md
+DEVELOPMENT.md
+QUICKSTART.md
+backenddocs.md
